@@ -13,7 +13,7 @@ Sources used for this code:
 * [Article link](https://explorations-blockchain.com/2023/10/06/conception-dun-contrat-wallet-un-contrat-pour-gerer-vos-ethers/)
 * [Twitter thread](https://twitter.com/0xNekr/status/1711766545959903526)
 
-
+## Solidity - Ralph
 By using the X thread from @0xNekr we are going to rewrite EtherWallet which is a smart contract to simulate a wallet in Ralph, smart contract language developed by @Alephium.
 Do not use this code in production
 
