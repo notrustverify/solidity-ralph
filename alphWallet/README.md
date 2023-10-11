@@ -33,6 +33,7 @@ This is where the things become interesting. @Alephium using annotation to add a
 * assetsInContract to be able to use the assets, ALPH in this case
 * updateFields because we are updating the contract state field balance
 * checkExternalCaller we need to check that only the owner can withdraw
+
 ![](img/withdraw.png)
 
 Receive function enable the owner of the wallet to receive some $ALPH. In this case annotation is used too but we don't check the caller since anybody can send $ALPH to this address
