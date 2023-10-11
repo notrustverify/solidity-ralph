@@ -28,14 +28,14 @@ getBalance() function is just a function that return the actual number of $ALPH 
 ![](img/getBalance.png)
 
 
-This is where the things become interesting. @Alephium using annotation to add an overall security of the assets (ALPH or other tokens) 
-assetsInContract to be able to use the assets, ALPH in this case
-updateFields because we are updating the contract state field balance
-checkExternalCaller we need to check that only the owner can withdraw
+This is where the things become interesting. @Alephium using annotation to add an overall security of the assets (ALPH or other tokens)
+
+* assetsInContract to be able to use the assets, ALPH in this case
+* updateFields because we are updating the contract state field balance
+* checkExternalCaller we need to check that only the owner can withdraw
 ![](img/withdraw.png)
 
 Receive function enable the owner of the wallet to receive some $ALPH. In this case annotation is used too but we don't check the caller since anybody can send $ALPH to this address
-
 PreapprovedAssets is an annotation that stipulates this smart contract is using assets, in this case ALPH. This annotation has an underlying concept, Asset Permission System or APS that it will be explained in another thread
 ![](img/receive.png)
 
