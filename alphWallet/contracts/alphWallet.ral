@@ -1,6 +1,6 @@
 Contract AlphWallet (
     owner: Address
-    mut balance: U256 // use to track the balance and limit gas fees. note: tokenRemaining!() function is avalaible
+    mut balance: U256 // track the balance and limit gas fees. note: tokenRemaining!() function is avalaible
 ){
 
     enum ErrorCodes {
