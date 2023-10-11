@@ -15,6 +15,7 @@ Sources used for this code:
 
 ## Solidity - Ralph
 By using the X thread from @0xNekr we are going to rewrite EtherWallet which is a smart contract to simulate a wallet in Ralph, smart contract language developed by @Alephium.
+
 Do not use this code in production
 
 First we need to define contract fields (its state) who are the owner of the "wallet" and the balance. The balance will follow the actual number of $ALPH. We could use tokenRemaining!() but to limit gas fee it's better to have a variable to save the number of $ALPH we have
@@ -34,4 +35,11 @@ checkExternalCaller we need to check that only the owner can withdraw
 ![](img/withdraw.png)
 
 Receive function enable the owner of the wallet to receive some $ALPH. In this case annotation is used too but we don't check the caller since anybody can send $ALPH to this address
+
+PreapprovedAssets is an annotation that stipulates this smart contract is using assets, in this case ALPH. This annotation has an underlying concept, Asset Permission System or APS that it will be explained in another thread
 ![](img/receive.png)
+
+This smart contract is very simple as you can see, the purpose of this is to show how different (or not so) Ralph is in comparison of Solidity
+Thanks to @0xNekr and his thread https://twitter.com/0xNekr/status/1711766545959903526 for the inspiration
+
+Stay tuned for next thread. It will be about APS
