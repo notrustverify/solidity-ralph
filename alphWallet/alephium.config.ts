@@ -11,24 +11,24 @@ const configuration: Configuration<Settings> = {
       nodeUrl: process.env.NODE_URL ?? 'https://wallet.testnet.alephium.org',
       settings: {
       },
-      privateKeys: process.env.PRIVKEY_TESTNET.split(',')
+      privateKeys: process.env.PRIVKEY_TESTNET === undefined ? [] :  process.env.PRIVKEY_TESTNET.split(',')
     },
-    mainnet:{
-	   nodeUrl: process.env.NODE_URL ?? 'https://node-alephium.ono.re',
-	   settings: {
-	   },
-	   privateKeys: process.env.PRIVKEY_MAINNET.split(',')
-	   
-    }, 
-	   
+    mainnet: {
+      nodeUrl: process.env.NODE_URL ?? 'https://node-alephium.ono.re',
+      settings: {
+      },
+      privateKeys: process.env.PRIVKEY_TESTNET === undefined ? [] :  process.env.PRIVKEY_TESTNET.split(',')
+
+    },
+
     devnet: {
-    nodeUrl: 'http://127.0.0.1:22973',
-    settings: {
-      privateKeys: []
-    },
-    privateKeys: process.env.PRIVKEY_DEVNET.split(',')
-    
-  }
+      nodeUrl: 'http://127.0.0.1:22973',
+      settings: {
+        privateKeys: []
+      },
+      privateKeys: process.env.PRIVKEY_TESTNET === undefined ? [] :  process.env.PRIVKEY_TESTNET.split(',')
+
+    }
   }
 }
 

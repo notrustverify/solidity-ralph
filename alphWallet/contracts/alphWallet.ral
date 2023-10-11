@@ -1,19 +1,21 @@
 Contract AlphWallet (
-    owner: Address
-    mut balance: U256 // track the balance and limit gas fees. note: tokenRemaining!() function is avalaible
+    owner: Address,
+    mut balance: U256
 ){
-
-    enum ErrorCodes {
-        InvalidCaller = 0
-    }
 
     // Events allow for logging of activities on the blockchain.
     // Alephium clients can listen to events in order to react to contract state changes.
     event Receive(from: Address, amount: U256)
     event Withdraw(to: Address, amount: U256)
 
+    enum ErrorCodes {
+        InvalidCaller = 0
+    }
+
+
     // A public function that returns the current balance of the contract.
-    pub fn getBalance() -> U256{
+    // track the balance and limit gas fees. note: tokenRemaining!() function is avalaible
+    pub fn getBalance() -> (U256){
         return balance
     }
 
@@ -21,14 +23,14 @@ Contract AlphWallet (
     // The function is annotated as using contract assets as it does.
     // The function is annotated as checking the ExternalCaller because we only the owner should be able to withdraw
     @using(assetsInContract = true, updateFields = true, checkExternalCaller = true)
-    pub fn withdraw(amount: U256){
+    pub fn withdraw(amount: U256) -> (){
         let caller = callerAddress!()
         checkCaller!(caller == owner, ErrorCodes.InvalidCaller)
 
         balance = balance - amount
         transferTokenFromSelf!(caller, ALPH, amount)
 
-        emit Withdraw(address, amount)
+        emit Withdraw(caller, amount)
 
     }
 
@@ -37,7 +39,7 @@ Contract AlphWallet (
     // The function is annotated as using preapproved assets, it's protection to limit the permission for example to draw more than amount authorized
     // More info about APS, preapprovedAssets https://docs.alephium.org/ralph/asset-permission-system
     @using(preapprovedAssets = true, assetsInContract = true, updateFields = true, checkExternalCaller = false)
-    pub fn receive(address: Address, amount: U256){
+    pub fn receive(address: Address, amount: U256) -> (){
         balance = balance + amount
         transferTokenToSelf!(address, ALPH, amount)
 

@@ -1,0 +1,34 @@
+{
+  "fullNodeVersion": "v2.5.7",
+  "compilerOptionsUsed": {
+    "ignoreUnusedConstantsWarnings": false,
+    "ignoreUnusedVariablesWarnings": false,
+    "ignoreUnusedFieldsWarnings": false,
+    "ignoreUnusedPrivateFunctionsWarnings": false,
+    "ignoreUpdateFieldsCheckWarnings": false,
+    "ignoreCheckExternalCallerWarnings": false
+  },
+  "infos": {
+    "AlphWallet": {
+      "sourceFile": "alphWallet.ral",
+      "sourceCodeHash": "4a24cbe6b4a9c93d2599a891bcab6030fb7baf15a05ade5788c7f7f2611f8aa3",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": "c3e6294621556a7deb467cd8d4a57bdda1a636f611a72b33d2519f6de4436a81",
+      "warnings": []
+    },
+    "Receive": {
+      "sourceFile": "receive.ral",
+      "sourceCodeHash": "7fd5e1ad979782f869c1c701d8ec73f91e30e8b7c2b0ee5fd680b539f524c81a",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": "",
+      "warnings": []
+    },
+    "Withdraw": {
+      "sourceFile": "withdraw.ral",
+      "sourceCodeHash": "44e0a8aed13c4a49a108c58fafacb2e70b62788b70240a685085312581918b81",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": "",
+      "warnings": []
+    }
+  }
+}

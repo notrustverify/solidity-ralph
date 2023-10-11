@@ -1,0 +1,34 @@
+{
+  "version": "v2.5.7",
+  "name": "Receive",
+  "bytecodeTemplate": "0101030001000bb417001600{2}a2{1}{2}0e0c{0}0102",
+  "fieldsSig": {
+    "names": [
+      "alphWallet",
+      "address",
+      "amount"
+    ],
+    "types": [
+      "ByteVec",
+      "Address",
+      "U256"
+    ],
+    "isMutable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "functions": [
+    {
+      "name": "main",
+      "usePreapprovedAssets": true,
+      "useAssetsInContract": false,
+      "isPublic": true,
+      "paramNames": [],
+      "paramTypes": [],
+      "paramIsMutable": [],
+      "returnTypes": []
+    }
+  ]
+}
