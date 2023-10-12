@@ -13,6 +13,17 @@ Sources used for this code:
 * [Article link](https://explorations-blockchain.com/2023/10/06/conception-dun-contrat-wallet-un-contrat-pour-gerer-vos-ethers/)
 * [Twitter thread](https://twitter.com/0xNekr/status/1711766545959903526)
 
+## Side by side
+
+|                | Solidity | Ralph |
+|----------------|----------|-------|
+| Contract State | ![](https://i0.wp.com/explorations-blockchain.com/wp-content/uploads/2023/10/EtherWallet.sol-Owner.png) | ![](img/contract-fields.png)|
+| Error Codes    |   ![](https://i0.wp.com/explorations-blockchain.com/wp-content/uploads/2023/10/EtherWallet.sol-Receive.png)       |   ![](img/errorscode.png)    |
+| Withdraw       | ![](https://i0.wp.com/explorations-blockchain.com/wp-content/uploads/2023/10/EtherWallet.sol-Withdraw.png)         | ![](img/withdraw.png)      |
+| Receive        | ![](https://i0.wp.com/explorations-blockchain.com/wp-content/uploads/2023/10/EtherWallet.sol-Get-Balance.png)          |   ![](img/receive.png)    |
+
+[Solidity image source](https://explorations-blockchain.com/2023/10/06/conception-dun-contrat-wallet-un-contrat-pour-gerer-vos-ethers/)
+
 ## Solidity - Ralph
 By using the X thread from @0xNekr we are going to rewrite EtherWallet which is a smart contract to simulate a wallet in Ralph, smart contract language developed by @Alephium.
 
