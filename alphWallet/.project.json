@@ -18,14 +18,35 @@
     },
     "Receive": {
       "sourceFile": "receive.ral",
-      "sourceCodeHash": "7fd5e1ad979782f869c1c701d8ec73f91e30e8b7c2b0ee5fd680b539f524c81a",
+      "sourceCodeHash": "9f79462d795ae7ec3ad081b6d22769f94e87c9ddbbcec287857fe4c4e8c938cf",
       "bytecodeDebugPatch": "",
       "codeHashDebug": "",
       "warnings": []
     },
+    "ReceiveToken": {
+      "sourceFile": "receive.ral",
+      "sourceCodeHash": "9f79462d795ae7ec3ad081b6d22769f94e87c9ddbbcec287857fe4c4e8c938cf",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": "",
+      "warnings": []
+    },
+    "TokenWallet": {
+      "sourceFile": "tokenWallet.ral",
+      "sourceCodeHash": "88b71cb1579e061cc4bea2f0f2961cb664499154d8c57b31109c5809c26c7007",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": "5c964cc7919f88ca6c9db81887da29d3b1753e7674d6d2259b73d2dc1b8c27d2",
+      "warnings": []
+    },
     "Withdraw": {
       "sourceFile": "withdraw.ral",
-      "sourceCodeHash": "44e0a8aed13c4a49a108c58fafacb2e70b62788b70240a685085312581918b81",
+      "sourceCodeHash": "4911c23cbc884868ceb208c8cac39459679625d4e8913f6bc4b242e551b9f14a",
+      "bytecodeDebugPatch": "",
+      "codeHashDebug": "",
+      "warnings": []
+    },
+    "WithdrawToken": {
+      "sourceFile": "withdraw.ral",
+      "sourceCodeHash": "4911c23cbc884868ceb208c8cac39459679625d4e8913f6bc4b242e551b9f14a",
       "bytecodeDebugPatch": "",
       "codeHashDebug": "",
       "warnings": []

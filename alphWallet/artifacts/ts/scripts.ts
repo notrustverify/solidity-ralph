@@ -12,14 +12,26 @@ import {
   HexString,
 } from "@alephium/web3";
 import { default as ReceiveScriptJson } from "../Receive.ral.json";
+import { default as ReceiveTokenScriptJson } from "../ReceiveToken.ral.json";
 import { default as WithdrawScriptJson } from "../Withdraw.ral.json";
+import { default as WithdrawTokenScriptJson } from "../WithdrawToken.ral.json";
 
 export const Receive = new ExecutableScript<{
   alphWallet: HexString;
   address: Address;
   amount: bigint;
 }>(Script.fromJson(ReceiveScriptJson));
+export const ReceiveToken = new ExecutableScript<{
+  tokenWallet: HexString;
+  address: Address;
+  amount: bigint;
+  tokenId: HexString;
+}>(Script.fromJson(ReceiveTokenScriptJson));
 export const Withdraw = new ExecutableScript<{
   alphWallet: HexString;
   amount: bigint;
 }>(Script.fromJson(WithdrawScriptJson));
+export const WithdrawToken = new ExecutableScript<{
+  tokenWallet: HexString;
+  amount: bigint;
+}>(Script.fromJson(WithdrawTokenScriptJson));

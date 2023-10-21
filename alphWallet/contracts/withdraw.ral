@@ -5,3 +5,8 @@
 TxScript Withdraw(alphWallet: AlphWallet, amount: U256) {
     alphWallet.withdraw(amount)
 }
+
+
+TxScript WithdrawToken(tokenWallet: TokenWallet, amount: U256) {
+    tokenWallet.withdraw(amount)
+}

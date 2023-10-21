@@ -3,4 +3,5 @@
 /* eslint-disable */
 
 export * from "./AlphWallet";
+export * from "./TokenWallet";
 export * from "./scripts";

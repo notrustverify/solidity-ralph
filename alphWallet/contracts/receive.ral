@@ -6,3 +6,9 @@ TxScript Receive(alphWallet: AlphWallet, address: Address, amount: U256) {
     let caller = callerAddress!()
     alphWallet.receive{caller -> ALPH: amount}(address, amount)
 }
+
+
+TxScript ReceiveToken(tokenWallet: TokenWallet, address: Address, amount: U256, tokenId: ByteVec) {
+    let caller = callerAddress!()
+    tokenWallet.receive{caller -> ALPH: dustAmount!(), tokenId: amount }(address, amount)
+}
